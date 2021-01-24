@@ -1,0 +1,15 @@
+{
+  "name": "avomd-lead-engineer-coding-case",
+  "version": "1.0.0",
+  "description": "AvoMD Lead Engineer Coding Case",
+  "main": "index.js",
+  "repository": "git@github.com:avoMD/LeadEngineerChallenge.git",
+  "author": "AvoMD Recruiting Team",
+  "license": "MIT",
+  "scripts": {
+    "server": "json-server db.json"
+  },
+  "dependencies": {
+    "json-server": "^0.14.2"
+  }
+}
