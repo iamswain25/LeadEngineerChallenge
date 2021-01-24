@@ -41,19 +41,23 @@ The interactions should not refresh the page.
 
 The full criteria for evaluating the coding challenge can be found [here](./Criteria.md).
 
+## Presentation Requirements
+
+On presentation day you will have 30 minutes to walk through the application, and discuss the through process behind architecture, structure, and approach. The format is completely up to the candidate, but most provide a series of slides / architecture diagrams / code, or a live walkthrough. We look forward to the discussion!
+
 # How to submit
 
 - Clone this repo.
 - A RESTful API for `patients` is provided with the challenge. To run, follow: [How to run API server](#how-to-run-api-server)
 - Complete your project as described above within your local repository.
-- Make sure that there are scripts to start both the server and the client.
-- Ensure everything you want to commit is committed before you bundle.
+- Ensure that there are scripts to start both the server and the client.
+- Please make sure everything you want to commit is committed before you bundle.
 - Create a git bundle: `git bundle create your_name.bundle --all`
-- Email the bundle file to your point of contact.
+- Email the bundle file to devops@avomd.io and lc@avomd.io at least 24 hours before your presentation.
 
 **In order to be fair to all candidates, please refrain from sharing your solution on public repository hosting services such as GitHub and Bitbucket.**
 
-# How to run API server
+# How to run the API server
 
 The boilerplate includes a small service for data fetching. The file `db.json` includes all the necessary data to achieve the goal. Please follow the steps below to start the server:
 

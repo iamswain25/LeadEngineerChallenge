@@ -4,7 +4,7 @@
 
 - The application must run
 - The application must be a single-page application (SPA)
-- The application must be divided into logicalcomponents
+- The application must be divided into logical components
 - The file structure must be consistent and easy to follow without additional documentation
 - The list and details page must cover all [use cases](README.md#use-cases) with minor issues
 - The application must include meaningful tests (meaningful tests validate logic or component behavior; superficial tests like snapshot tests, or tests that just validate if a component renders are not accepted)
@@ -13,6 +13,8 @@
 
 - The application is configurable by environment variables
 - The application has a development and production environment
+- Thoughtful User Centric Design & UI
+- Polished presentation layer
 - The application supports code splitting
 - The application has good naming conventions
 - The application computes values
