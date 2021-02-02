@@ -13,7 +13,7 @@
 
 - The application is configurable by environment variables
 - The application has a development and production environment
-- Thoughtful User Centric Design & UI
+- Thoughtful User Centric Design & UI - The key user is a doctor who wants to review patient data easily and quickly. Any UI tweaks to improve the experience are a great bonus!
 - Polished presentation layer
 - The application supports code splitting
 - The application has good naming conventions

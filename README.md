@@ -17,7 +17,7 @@ Welcome to the AvoMD frontend coding case interview! Please read the following i
 
 # Business Requirement
 
-The business has specified we need to build a portal to better manage our patient data across physicians and clinics. The goal is for the user to check the status of patients at a glance. This allows our healthcare administrators to take faster decisions and help provide visibility into the state of their patients.
+The business has specified we need to build a portal to better manage our patient data across physicians and clinics. The goal is for the user (doctors & healthcare administrators) to check the status of patients at a glance. This allows our healthcare administrators to take faster decisions and help provide visibility into the state of their patients.
 
 Providing information to the healthcare administrator increases transparency and reduces communication issues.
 
