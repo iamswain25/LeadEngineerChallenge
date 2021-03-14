@@ -9,9 +9,10 @@ export default function TableMaterial() {
       .then(setData);
   }, [setData]);
   return (
-    <div style={{ maxWidth: "100%" }}>
+    <section>
       <MaterialTable
         icons={tableIcons}
+        options={{ pageSize: 20 }}
         columns={[
           { title: "id", field: "id" },
           { title: "first_name", field: "first_name" },
@@ -23,20 +24,20 @@ export default function TableMaterial() {
           { title: "ssn", field: "ssn" },
           { title: "insured", field: "insured", type: "boolean" },
           { title: "deceased", field: "deceased", type: "boolean" },
-          {
-            title: "diagnosis",
-            field: "diagnosis",
-            render: (rowData) => <div>{JSON.stringify(rowData)}</div>,
-          },
-          {
-            title: "pcp",
-            field: "pcp",
-            render: (rowData) => <div>{JSON.stringify(rowData)}</div>,
-          },
+          // {
+          //   title: "diagnosis",
+          //   field: "diagnosis",
+          //   render: (rowData) => <div>{JSON.stringify(rowData.diagnosis)}</div>,
+          // },
+          // {
+          //   title: "pcp",
+          //   field: "pcp",
+          //   render: (rowData) => <div>{JSON.stringify(rowData.pcp)}</div>,
+          // },
         ]}
         data={data as any}
-        title="Demo Title"
+        title="patient data"
       />
-    </div>
+    </section>
   );
 }
