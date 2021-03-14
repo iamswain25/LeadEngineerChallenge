@@ -1,5 +1,6 @@
 import MaterialTable from "material-table";
 import React from "react";
+import RecursiveList from "./RecursiveList";
 import { tableIcons } from "./TableIcons";
 export default function TableMaterial() {
   const [data, setData] = React.useState();
@@ -13,6 +14,13 @@ export default function TableMaterial() {
       <MaterialTable
         icons={tableIcons}
         options={{ pageSize: 20 }}
+        detailPanel={(rowData: any) => {
+          return (
+            <div>
+              <RecursiveList data={rowData} />
+            </div>
+          );
+        }}
         columns={[
           { title: "id", field: "id", searchable: true },
           { title: "first_name", field: "first_name", searchable: false },
