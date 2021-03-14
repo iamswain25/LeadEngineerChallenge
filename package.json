@@ -26,7 +26,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "server": "json-server db.json --port 3001",
+    "server": "json-server db.json --port $(grep REACT_APP_SERVER_PORT .env | cut -d '=' -f2)",
     "start": "concurrently \"yarn server\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
