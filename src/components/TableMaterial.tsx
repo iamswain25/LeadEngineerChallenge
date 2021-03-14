@@ -1,14 +1,7 @@
 import MaterialTable from "material-table";
-import React from "react";
 import RecursiveList from "./RecursiveList";
 import { tableIcons } from "./TableIcons";
-export default function TableMaterial() {
-  const [data, setData] = React.useState();
-  React.useEffect(() => {
-    fetch("http://localhost:3001/patients")
-      .then((res) => res.json())
-      .then(setData);
-  }, [setData]);
+export default function TableMaterial({ data }: any) {
   return (
     <section>
       <MaterialTable
@@ -53,7 +46,7 @@ export default function TableMaterial() {
           //   render: (rowData) => <div>{JSON.stringify(rowData.pcp)}</div>,
           // },
         ]}
-        data={data as any}
+        data={data}
         title="patient data"
       />
     </section>
