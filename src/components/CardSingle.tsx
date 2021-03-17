@@ -1,13 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
-import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import CheckIcon from "@material-ui/icons/Check";
 import CakeIcon from "@material-ui/icons/Cake";
-import { Grid, Tooltip, Chip } from "@material-ui/core";
+import { Grid, Chip } from "@material-ui/core";
 import React from "react";
 import DetailModal from "./DetailModal";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
@@ -32,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
   uninsured: {
     backgroundColor: "#ff9100",
   },
+  deceased: {
+    backgroundColor: "#000",
+    color: "#fff",
+  },
 }));
 export default function CardSingle({ data }: any) {
   const classes = useStyles();
@@ -55,18 +57,30 @@ export default function CardSingle({ data }: any) {
           >
             {data.id}
           </Typography>
-          <Chip
-            classes={{
-              root: data.insured ? classes.insured : classes.uninsured,
-            }}
-            label={data.insured ? "insured" : "uninsured"}
-          />
+          <div>
+            <div>
+              <Chip
+                size="small"
+                classes={{
+                  root: data.insured ? classes.insured : classes.uninsured,
+                }}
+                label={data.insured ? "insured" : "uninsured"}
+              />
+            </div>
+            {data.deceased && (
+              <div>
+                <Chip
+                  size="small"
+                  classes={{
+                    root: classes.deceased,
+                  }}
+                  label="deceased"
+                />
+              </div>
+            )}
+          </div>
         </Grid>
-        <Typography
-          variant="h5"
-          component="h2"
-          className={data.deceased ? classes.strikethrough : undefined}
-        >
+        <Typography variant="h5" component="h2">
           <Grid container alignItems="center">
             {data.first_name}
           </Grid>
