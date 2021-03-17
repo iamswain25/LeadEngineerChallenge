@@ -30,37 +30,35 @@ function HomeGrid({ data }: any) {
   }, [sortBy, desc, filteredData]);
   return (
     <Container>
+      <h1>Patients List</h1>
       <Grid container wrap="wrap" alignItems="center" justify="space-between">
-        <h1>Patients List</h1>
-        <div>
-          <Grid>
-            Search id or ssn:{" "}
-            <input
-              type="text"
-              value={searchString}
-              onChange={(ev) => setSearchString(ev.target.value)}
-            />
-          </Grid>
-          <Grid>
-            sort by{" "}
-            <NativeSelect
-              variant="outlined"
-              value={sortBy}
-              onChange={handleChangeSelect}
-            >
-              <option value="id">ID</option>
-              <option value="first_name">First Name</option>
-            </NativeSelect>
-            <Button
-              color="primary"
-              size="small"
-              onClick={handleBtnDesc}
-              variant="contained"
-            >
-              {desc ? "DESC" : "ASC"}
-            </Button>
-          </Grid>
-        </div>
+        <Grid>
+          Search id or ssn:{" "}
+          <input
+            type="text"
+            value={searchString}
+            onChange={(ev) => setSearchString(ev.target.value)}
+          />
+        </Grid>
+        <Grid>
+          sort by{" "}
+          <NativeSelect
+            variant="outlined"
+            value={sortBy}
+            onChange={handleChangeSelect}
+          >
+            <option value="id">ID</option>
+            <option value="first_name">First Name</option>
+          </NativeSelect>
+          <Button
+            color="primary"
+            size="small"
+            onClick={handleBtnDesc}
+            variant="contained"
+          >
+            {desc ? "DESC" : "ASC"}
+          </Button>
+        </Grid>
       </Grid>
       <Pagination data={filteredData} />
     </Container>
