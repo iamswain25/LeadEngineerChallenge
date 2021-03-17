@@ -4,7 +4,7 @@ import TableMaterial from "./components/TableMaterial";
 import { patients } from "./db.json";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ul>
         <li>
           <Link to="/grid">Grid List</Link>
