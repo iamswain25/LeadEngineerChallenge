@@ -62,7 +62,7 @@ export default function CardSingle({ data }: any) {
               enterTouchDelay={100}
             >
               {data.insured ? (
-                <CheckIcon htmlColor="#30B568" />
+                <CheckIcon color="primary" />
               ) : (
                 <RemoveCircleOutlineIcon />
               )}
