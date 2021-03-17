@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "&:hover": {
       cursor: "pointer",
-      borderRadius: 50,
-      boxShadow: "12px 12px 2px 1px rgba(111, 191, 115, .2)",
+      borderRadius: 20,
+      boxShadow: "0px 4px 20px rgba(0, 0, 0, .15)",
     },
   },
   title: {
