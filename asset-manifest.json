@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/LeadEngineerChallenge/static/css/main.a1013b7b.chunk.css",
+    "main.js": "/LeadEngineerChallenge/static/js/main.f83a7711.chunk.js",
+    "main.js.map": "/LeadEngineerChallenge/static/js/main.f83a7711.chunk.js.map",
+    "runtime-main.js": "/LeadEngineerChallenge/static/js/runtime-main.6ebad365.js",
+    "runtime-main.js.map": "/LeadEngineerChallenge/static/js/runtime-main.6ebad365.js.map",
+    "static/js/2.07000df4.chunk.js": "/LeadEngineerChallenge/static/js/2.07000df4.chunk.js",
+    "static/js/2.07000df4.chunk.js.map": "/LeadEngineerChallenge/static/js/2.07000df4.chunk.js.map",
+    "static/js/3.62c711da.chunk.js": "/LeadEngineerChallenge/static/js/3.62c711da.chunk.js",
+    "static/js/3.62c711da.chunk.js.map": "/LeadEngineerChallenge/static/js/3.62c711da.chunk.js.map",
+    "static/js/4.aa47b321.chunk.js": "/LeadEngineerChallenge/static/js/4.aa47b321.chunk.js",
+    "static/js/4.aa47b321.chunk.js.map": "/LeadEngineerChallenge/static/js/4.aa47b321.chunk.js.map",
+    "static/js/5.26f181d7.chunk.js": "/LeadEngineerChallenge/static/js/5.26f181d7.chunk.js",
+    "static/js/5.26f181d7.chunk.js.map": "/LeadEngineerChallenge/static/js/5.26f181d7.chunk.js.map",
+    "static/js/6.961d2640.chunk.js": "/LeadEngineerChallenge/static/js/6.961d2640.chunk.js",
+    "static/js/6.961d2640.chunk.js.map": "/LeadEngineerChallenge/static/js/6.961d2640.chunk.js.map",
+    "index.html": "/LeadEngineerChallenge/index.html",
+    "static/css/main.a1013b7b.chunk.css.map": "/LeadEngineerChallenge/static/css/main.a1013b7b.chunk.css.map",
+    "static/js/2.07000df4.chunk.js.LICENSE.txt": "/LeadEngineerChallenge/static/js/2.07000df4.chunk.js.LICENSE.txt",
+    "static/js/3.62c711da.chunk.js.LICENSE.txt": "/LeadEngineerChallenge/static/js/3.62c711da.chunk.js.LICENSE.txt",
+    "static/js/4.aa47b321.chunk.js.LICENSE.txt": "/LeadEngineerChallenge/static/js/4.aa47b321.chunk.js.LICENSE.txt",
+    "static/js/5.26f181d7.chunk.js.LICENSE.txt": "/LeadEngineerChallenge/static/js/5.26f181d7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ebad365.js",
+    "static/js/2.07000df4.chunk.js",
+    "static/css/main.a1013b7b.chunk.css",
+    "static/js/main.f83a7711.chunk.js"
+  ]
+}
