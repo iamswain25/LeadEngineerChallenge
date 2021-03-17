@@ -1,6 +1,5 @@
 import { ThemeProvider, createMuiTheme, Theme } from "@material-ui/core";
-import React from "react";
-import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import HomeGrid from "./components/HomeGrid";
 import TableMaterial from "./components/TableMaterial";
 import { patients } from "./db.json";
@@ -13,7 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/grid">Grid List</Link>
           </li>
@@ -22,7 +21,7 @@ function App() {
           </li>
         </ul>
 
-        <hr />
+        <hr /> */}
         <Switch>
           <Route
             path="/grid"

@@ -10,10 +10,11 @@ import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    borderRadius: 50,
+    boxShadow: "0px 10px 30px rgba(0, 0, 0, .15)",
     "&:hover": {
       cursor: "pointer",
-      borderRadius: 50,
-      boxShadow: "0px 10px 30px rgba(0, 0, 0, .15)",
+      opacity: "0.7",
     },
   },
   title: {
