@@ -1,14 +1,16 @@
 import { makeStyles } from "@material-ui/core/styles";
+import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CheckIcon from "@material-ui/icons/Check";
-import CloseIcon from "@material-ui/icons/Close";
+import CakeIcon from "@material-ui/icons/Cake";
 import { Grid, Tooltip } from "@material-ui/core";
 import React from "react";
 import DetailModal from "./DetailModal";
+import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +47,7 @@ export default function CardSingle({ data }: any) {
         >
           {data.id}
         </Typography>
+
         <Typography
           variant="h5"
           component="h2"
@@ -53,20 +56,31 @@ export default function CardSingle({ data }: any) {
           <Grid container alignItems="center">
             {data.first_name}
             <Tooltip
-              title="insured"
-              aria-label="insured"
+              title={data.insured ? "insured" : "not insured"}
+              aria-label={data.insured ? "insured" : "not insured"}
               interactive
               enterTouchDelay={100}
             >
-              {data.insured ? <CheckIcon htmlColor="#30B568" /> : <CloseIcon />}
+              {data.insured ? (
+                <CheckIcon htmlColor="#30B568" />
+              ) : (
+                <RemoveCircleOutlineIcon />
+              )}
             </Tooltip>
           </Grid>
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           {data.last_name}
         </Typography>
-        <Typography variant="body2" component="p">
-          ssn: {data.ssn}
+        <Typography variant="h6">
+          <Grid container alignItems="center">
+            <PermIdentityIcon fontSize="small" /> {data.ssn}
+          </Grid>
+        </Typography>
+        <Typography variant="h6">
+          <Grid container alignItems="center">
+            <CakeIcon fontSize="small" /> {data.birthdate}
+          </Grid>
         </Typography>
       </CardContent>
       <CardActions>

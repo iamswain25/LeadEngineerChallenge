@@ -1,4 +1,4 @@
-import { Container } from "@material-ui/core";
+import { Container, Grid, Typography } from "@material-ui/core";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ReactPaginate from "react-paginate";
@@ -13,8 +13,11 @@ export default function Pagination({ data }: any) {
     const offset = COUNT_PER_PAGE * selected;
     setOffset(offset);
   }
+  React.useEffect(() => {
+    setOffset(0);
+  }, [data]);
   return (
-    <Container>
+    <>
       <Cards data={data.slice(offset, offset + 20)} />
       <ReactPaginate
         activeClassName={"item active "}
@@ -32,6 +35,6 @@ export default function Pagination({ data }: any) {
         previousClassName={"item previous"}
         previousLabel={<ArrowBackIosIcon style={{ fontSize: 18 }} />}
       />
-    </Container>
+    </>
   );
 }
