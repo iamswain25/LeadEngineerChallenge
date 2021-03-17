@@ -1,42 +1,33 @@
-import React, { useMemo } from "react";
-import { Container, Grid, Typography } from "@material-ui/core";
-import Pagination from "./components/Pagination";
-const REACT_APP_SERVER_PORT = process.env.REACT_APP_SERVER_PORT;
+import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
+import HomeGrid from "./components/HomeGrid";
+import TableMaterial from "./components/TableMaterial";
+import { patients } from "./db.json";
 function App() {
-  const [data, setData] = React.useState<any[]>();
-  const [searchString, setSearchString] = React.useState("");
-  React.useEffect(() => {
-    fetch(`http://localhost:${REACT_APP_SERVER_PORT}/patients`)
-      .then((res) => res.json())
-      .then(setData);
-  }, [setData]);
-  const filteredData = useMemo(
-    () =>
-      data?.filter((item: any) => {
-        return (
-          item.ssn.includes(searchString) || item.id.includes(searchString)
-        );
-      }),
-    [searchString]
+  return (
+    <BrowserRouter>
+      <ul>
+        <li>
+          <Link to="/grid">Grid List</Link>
+        </li>
+        <li>
+          <Link to="/table">Table List</Link>
+        </li>
+      </ul>
+
+      <hr />
+      <Switch>
+        <Route path="/grid" exact render={() => <HomeGrid data={patients} />} />
+        <Route
+          path="/table"
+          exact
+          render={() => <TableMaterial data={patients} />}
+        />
+        <Route path="*">
+          <Redirect to="/grid" />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
-  if (data)
-    return (
-      <Container>
-        <Grid container wrap="wrap" alignItems="center" justify="space-between">
-          <h1>Patients List</h1>
-          <div>
-            Search id or ssn:{" "}
-            <input
-              type="text"
-              value={searchString}
-              onChange={(ev) => setSearchString(ev.target.value)}
-            />
-          </div>
-        </Grid>
-        <Pagination data={filteredData} />
-      </Container>
-    );
-  else return null;
 }
 
 export default App;
