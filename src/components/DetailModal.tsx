@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import Modal from "@material-ui/core/Modal";
-import RecursiveList from "./RecursiveList";
+import PatientDetail from "./PatientDetail";
 const useStyles = makeStyles((theme) => ({
   paper: {
     // position: "absolute",
@@ -33,7 +33,7 @@ export default function DetailModal(props: any) {
             <CloseIcon />
           </IconButton>
         </Grid>
-        <RecursiveList data={data} />
+        <PatientDetail data={data} />
       </div>
     </Modal>
   );
