@@ -7,7 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import CheckIcon from "@material-ui/icons/Check";
 import CloseIcon from "@material-ui/icons/Close";
 import { Grid, Tooltip } from "@material-ui/core";
-const useStyles = makeStyles({
+import React from "react";
+import DetailModal from "./DetailModal";
+
+const useStyles = makeStyles((theme) => ({
   root: {
     // minWidth: 275,
   },
@@ -20,9 +23,18 @@ const useStyles = makeStyles({
   strikethrough: {
     textDecoration: "line-through",
   },
-});
+}));
 export default function CardSingle({ data }: any) {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
@@ -58,7 +70,10 @@ export default function CardSingle({ data }: any) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Detail</Button>
+        <Button size="small" onClick={handleOpen}>
+          Detail
+        </Button>
+        <DetailModal open={open} onClose={handleClose} data={data} />
       </CardActions>
     </Card>
   );
